@@ -1,0 +1,46 @@
+{
+    "name": "endroid/documenter-bundle",
+    "description": "Endroid Documenter Bundle",
+    "keywords": ["endroid", "documenter", "symfony", "bundle", "php"],
+    "homepage": "https://github.com/endroid/documenter-bundle",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jeroen van den Enden",
+            "email": "info@endroid.nl"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "endroid/installer": "^1.2.2",
+        "endroid/documenter": "^1.0",
+        "symfony/framework-bundle": "^3.4||^4.4||^5.0",
+        "symfony/yaml": "^3.4||^4.4||^5.0"
+    },
+    "require-dev": {
+        "endroid/quality": "dev-master"
+    },
+    "suggest": {
+        "roave/security-advisories": "Avoids installation of package versions with vulnerabilities",
+        "symfony/security-checker": "Checks your composer.lock for vulnerabilities"
+    },
+    "autoload": {
+        "psr-4": {
+            "Endroid\\DocumenterBundle\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Endroid\\DocumenterBundle\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

@@ -1,0 +1,3 @@
+endroid_documenter:
+    resource: "@EndroidDocumenterBundle/Resources/config/routes.yaml"
+    prefix: /documenter
