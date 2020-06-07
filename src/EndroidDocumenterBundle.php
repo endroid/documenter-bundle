@@ -9,11 +9,10 @@ declare(strict_types=1);
  * with this source code in the file LICENSE.
  */
 
-namespace Endroid\QrCodeBundle;
+namespace Endroid\DocumenterBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 class EndroidDocumenterBundle extends Bundle
 {
-
 }

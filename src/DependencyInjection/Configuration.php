@@ -31,7 +31,8 @@ class Configuration implements ConfigurationInterface
 
         $rootNode
             ->children()
-                ->scalarNode('name')->defaultValue('Project Documentation')->end()
+                ->arrayNode('paths')->scalarPrototype()->end()->end()
+                ->arrayNode('whitelist')->scalarPrototype()->end()->end()
         ;
 
         return $treeBuilder;

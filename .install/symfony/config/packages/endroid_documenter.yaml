@@ -1,2 +1,3 @@
 endroid_documenter:
-    project: Endroid
+    whitelist:
+        - App\

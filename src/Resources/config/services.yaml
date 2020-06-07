@@ -1,0 +1,15 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    Endroid\DocumenterBundle\Controller\:
+        resource: '../../Controller'
+        tags: ['controller.service_arguments']
+
+    Endroid\Documenter\UmlDiagram\YumlDiagramBuilder: ~
+    Endroid\Documenter\UmlDiagram\UmlDiagramBuilderInterface: '@Endroid\Documenter\UmlDiagram\YumlDiagramBuilder'
+
+    Endroid\Documenter\ClassInfo\ClassInfoFactory: ~
+    Endroid\Documenter\ClassInfo\ClassInfoFactoryInterface: '@Endroid\Documenter\ClassInfo\ClassInfoFactory'

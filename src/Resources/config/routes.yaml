@@ -1,0 +1,4 @@
+documenter_uml_diagram:
+    path: /uml-diagram
+    defaults:
+        _controller: Endroid\DocumenterBundle\Controller\UmlDiagramController

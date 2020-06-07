@@ -11,6 +11,7 @@ declare(strict_types=1);
 
 namespace Endroid\DocumenterBundle\DependencyInjection;
 
+use Endroid\Documenter\UmlDiagram\UmlDiagramBuilderInterface;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -31,5 +32,23 @@ class EndroidDocumenterExtension extends Extension
 
         $loader = new YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yaml');
+
+        $definition = $container->findDefinition(UmlDiagramBuilderInterface::class);
+
+        if (0 === count($config['paths'])) {
+            $config['paths'] = [$container->getParameter('kernel.project_dir').'/src/'];
+        }
+
+        foreach ($config['paths'] as $path) {
+            $definition->addMethodCall('addPath', [$path]);
+        }
+
+        if (0 === count($config['whitelist'])) {
+            $config['whitelist'] = ['App\\'];
+        }
+
+        foreach ($config['whitelist'] as $whitelist) {
+            $definition->addMethodCall('addWhitelist', [$whitelist]);
+        }
     }
 }
