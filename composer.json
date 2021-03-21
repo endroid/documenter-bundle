@@ -12,9 +12,9 @@
         }
     ],
     "require": {
-        "php": ">=7.2",
-        "endroid/installer": "^1.2.2",
+        "php": "^7.3||^8.0",
         "endroid/documenter": "^1.0",
+        "endroid/installer": "^1.2.2",
         "symfony/framework-bundle": "^3.4||^4.4||^5.0",
         "symfony/yaml": "^3.4||^4.4||^5.0"
     },
